@@ -7,7 +7,7 @@ locals {
   tags = {
    "id"             = "2560"
     "owner"          = "DevOps"
-    "teams"          = "Devops"
+    "teams"          = "prod"
     "environment"    = "dev"
     "project"        = "samka"
     "create_by"      = "a1samka"
@@ -15,8 +15,8 @@ locals {
 }
   }
 
-module "ec2" {
-  source                        = "github.com/utrains2158/aurora-postgress-module/module/ec2"
+module "ec2-prod" {
+  source                        = "github.com/utrains2158/aurora-postgress-module//modules/ec2"
   aws_region                    = local.aws_region
   ec2_instance_type             = local.ec2_instance_type
   vpc_id                        = local.vpc_id

@@ -7,7 +7,7 @@ locals {
   tags = {
    "id"             = "2560"
     "owner"          = "DevOps"
-    "teams"          = "prod"
+    "teams"          = "Devops"
     "environment"    = "dev"
     "project"        = "samka"
     "create_by"      = "a1samka"
@@ -15,12 +15,13 @@ locals {
 }
   }
 
-module "ec2" {
-  source                        = "github.com/utrains2158/aurora-postgress-module/module/ec2"
-  aws_region                    = local.aws_region
-  ec2_instance_type             = local.ec2_instance_type
-  vpc_id                        = local.vpc_id
-  subnet_id                     = local.subnet_id
-  root_volume_size              = local.root_volume_size
-  tags                          = local.tags
+module "ec2-dev" {
+  source = "github.com/utrains2158/aurora-postgress-module//modules/ec2"
+  
+  aws_region        = local.aws_region
+  ec2_instance_type = local.ec2_instance_type
+  vpc_id            = local.vpc_id
+  subnet_id         = local.subnet_id
+  root_volume_size  = local.root_volume_size
+  tags              = local.tags
 }
