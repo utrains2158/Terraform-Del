@@ -8,7 +8,7 @@ locals {
    "id"             = "2560"
     "owner"          = "DevOps"
     "teams"          = "Devops"
-    "environment"    = "dev"
+    "environment"    = "prod"
     "project"        = "samka"
     "create_by"      = "a1samka"
     "cloud_provider" = "aws"

@@ -7,7 +7,7 @@ locals {
   tags = {
    "id"             = "2560"
     "owner"          = "DevOps"
-    "teams"          = "Devops"
+    "teams"          = "prod"
     "environment"    = "dev"
     "project"        = "samka"
     "create_by"      = "a1samka"
