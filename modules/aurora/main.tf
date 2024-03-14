@@ -52,8 +52,8 @@ resource "aws_rds_cluster" "samka_aurora-cluster" {
   engine                          = var.samka_cluster["engine"]
   engine_version                  = var.samka_cluster["engine_version"]
   database_name                   = var.samka_cluster["database_name"]
-  master_username                        = local.db_creds.master_username
-  master_password                        = local.db_creds.master_password
+  master_username                 = local.db_creds.master_username
+  master_password                 = local.db_creds.master_password
   db_subnet_group_name            = aws_db_subnet_group.samka_subnet_group.name
   vpc_security_group_ids          = [aws_security_group.samka_rds_sg.id]
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.samka_parameter_group.name
